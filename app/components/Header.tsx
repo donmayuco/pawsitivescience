@@ -13,27 +13,30 @@ export default function Header() {
     }`;
 
     return (
-        <header className="relative">
-          {/* teal line across the header */}
-          <div className="pointer-events-none absolute left-0 right-0 top-[70%] h-[3px] bg-teal-600/70" />
-      
-          {/* header content sits above the line */}
-          <div className="relative mx-auto flex max-w-5xl items-center justify-between px-6 py-6">
-            <div className="flex items-center gap-3">
-              <Image
-                src="/pawsitive-science-logo.png"
-                alt="Pawsitive Science logo"
-                width={180}
-                height={60}
-                priority
-              />
-              <span className="text-sm font-medium text-zinc-600">PawsitiveScience</span>
-            </div>
-      
-            <nav className="flex items-center gap-4 text-sm">
-              <Link className={linkClass("/about")} href="/about">About</Link>
-            </nav>
+      <header className="mx-auto w-full max-w-5xl px-4 py-4 sm:px-6 sm:py-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          {/* Left: logo + name */}
+          <div className="flex items-center gap-3 min-w-0">
+            <Image
+              src="/pawsitive-science-logo.png"
+              alt="Pawsitive Science logo"
+              width={180}
+              height={60}
+              priority
+              className="h-auto w-[140px] sm:w-[180px] shrink-0"
+            />
+            <span className="text-sm font-medium text-zinc-600 truncate">
+              PawsitiveScience
+            </span>
           </div>
-        </header>
-      );
+    
+          {/* Right: nav */}
+          <nav className="flex justify-end sm:justify-normal flex-shrink-0">
+            <Link className={linkClass("/about")} href="/about">
+              About
+            </Link>
+          </nav>
+        </div>
+      </header>
+    );
 }
