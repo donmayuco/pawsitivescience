@@ -26,7 +26,7 @@ export default function Header() {
               className="w-[140px] sm:w-[180px] h-auto"
             />
             <span className="text-sm font-medium text-slate-600">
-              PawsitiveScience
+              
             </span>
           </div>
     
