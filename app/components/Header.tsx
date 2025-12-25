@@ -13,25 +13,25 @@ export default function Header() {
     }`;
 
     return (
-      <header className="mx-auto w-full max-w-5xl px-4 py-4 sm:px-6 sm:py-6">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          {/* Left: logo + name */}
-          <div className="flex items-center gap-3 min-w-0">
+      <header className="w-full border-b border-slate-200 bg-white">
+        <div className="mx-auto max-w-5xl px-4 py-4">
+          {/* Logo row */}
+          <div className="flex items-center gap-3">
             <Image
               src="/pawsitive-science-logo.png"
               alt="Pawsitive Science logo"
               width={180}
               height={60}
               priority
-              className="h-auto w-[140px] sm:w-[180px] shrink-0"
+              className="w-[140px] sm:w-[180px] h-auto"
             />
-            <span className="text-sm font-medium text-zinc-600 truncate">
+            <span className="text-sm font-medium text-slate-600">
               PawsitiveScience
             </span>
           </div>
     
-          {/* Right: nav */}
-          <nav className="flex justify-end sm:justify-normal flex-shrink-0">
+          {/* Nav row */}
+          <nav className="mt-3 flex justify-end sm:mt-0 sm:justify-start">
             <Link className={linkClass("/about")} href="/about">
               About
             </Link>
