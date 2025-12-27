@@ -1,10 +1,7 @@
-import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
-
-import Link from "next/link";
-import Image from "next/image";
 
 import Header from "./components/Header";
 
@@ -25,33 +22,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="min-h-screen bg-white text-zinc-900">
-          
-
-        <Header />
-        
+          <Header />
           {children}
         </div>
-        export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body>
-        {/* your header, etc */}
-        {children}
 
+        {/* Vercel Analytics (production) */}
         <Analytics />
-      </body>
-    </html>
-  );
-}
       </body>
     </html>
   );
