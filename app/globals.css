@@ -260,11 +260,26 @@ small, .ps-meta {
   display: flex; flex-direction: column; align-items: center; gap: 8px;
 }
 .ps-header__brand {
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: center; justify-content: center; gap: 18px;
   color: var(--ps-navy); text-decoration: none;
   line-height: 0;
 }
-.ps-header__logo { height: clamp(96px, 11vw, 140px); width: auto; display: block; }
+.ps-header__mark { height: clamp(72px, 8vw, 96px); width: auto; display: block; }
+.ps-header__wordmark {
+  display: flex; flex-direction: column; align-items: flex-start;
+  font-family: var(--font-sans); font-weight: 800; line-height: 0.98;
+  letter-spacing: 0.02em;
+}
+.ps-header__wordmark-paw {
+  font-size: clamp(28px, 3.2vw, 40px); color: var(--ps-navy);
+}
+.ps-header__wordmark-sci {
+  font-size: clamp(14px, 1.6vw, 20px); color: var(--ps-teal-700);
+  letter-spacing: 0.18em; margin-top: 4px;
+}
+@media (max-width: 520px) {
+  .ps-header__wordmark { display: none; }
+}
 .ps-header__row {
   width: 100%;
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
