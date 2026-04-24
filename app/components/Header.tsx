@@ -28,10 +28,10 @@ export default function Header() {
       <div className="ps-header__inner">
         <Link href="/" className="ps-header__brand" aria-label="Pawsitive Science home">
           <Image
-            src="/pawsitive-science-logo.png"
+            src="/pawsitive-science-new-logo.png"
             alt="Pawsitive Science"
-            width={180}
-            height={60}
+            width={640}
+            height={640}
             priority
             className="ps-header__logo"
           />
