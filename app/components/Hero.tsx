@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import PhotoPlaceholder from "./PhotoPlaceholder";
 
 export default function Hero() {
   return (
@@ -27,9 +27,13 @@ export default function Hero() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="ps-hero__rings" src="/atomic-rings.svg" alt="" aria-hidden="true" />
         <div className="ps-hero__photo">
-          <PhotoPlaceholder
-            label="Editorial photograph"
-            small="person + dog, warm natural light"
+          <Image
+            src="/hero-magazine.png"
+            alt="Pawsitive Science — Summer 2024 cover: The Healing Bond"
+            fill
+            priority
+            sizes="(max-width: 860px) 100vw, 540px"
+            style={{ objectFit: "cover" }}
           />
         </div>
       </div>
