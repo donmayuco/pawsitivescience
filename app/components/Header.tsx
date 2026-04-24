@@ -36,30 +36,32 @@ export default function Header() {
             className="ps-header__logo"
           />
         </Link>
-        <nav className="ps-header__nav">
-          {nav.map((n) => {
-            const active = pathname === n.path || (n.path !== "/" && pathname?.startsWith(n.path));
-            return (
-              <Link
-                key={n.path}
-                href={n.path}
-                className={`ps-header__link ${active ? "is-active" : ""}`}
-              >
-                {n.label}
-              </Link>
-            );
-          })}
-        </nav>
-        <div className="ps-header__actions">
-          <button type="button" className="ps-iconbtn" aria-label="Search">
-            <Search />
-          </button>
-          <button type="button" className="ps-iconbtn" aria-label="Account">
-            <User />
-          </button>
-          <Link href="/submit" className="ps-btn ps-btn--cta ps-btn--sm">
-            Submit your story
-          </Link>
+        <div className="ps-header__row">
+          <nav className="ps-header__nav">
+            {nav.map((n) => {
+              const active = pathname === n.path || (n.path !== "/" && pathname?.startsWith(n.path));
+              return (
+                <Link
+                  key={n.path}
+                  href={n.path}
+                  className={`ps-header__link ${active ? "is-active" : ""}`}
+                >
+                  {n.label}
+                </Link>
+              );
+            })}
+          </nav>
+          <div className="ps-header__actions">
+            <button type="button" className="ps-iconbtn" aria-label="Search">
+              <Search />
+            </button>
+            <button type="button" className="ps-iconbtn" aria-label="Account">
+              <User />
+            </button>
+            <Link href="/submit" className="ps-btn ps-btn--cta ps-btn--sm">
+              Submit your story
+            </Link>
+          </div>
         </div>
       </div>
     </header>
