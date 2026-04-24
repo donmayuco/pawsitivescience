@@ -26,9 +26,15 @@ export default function Header() {
   return (
     <header className={`ps-header ${scrolled ? "ps-header--scrolled" : ""}`}>
       <div className="ps-header__inner">
-        <Link href="/" className="ps-header__brand">
-          <Image src="/logo-mark.png" alt="" width={32} height={32} />
-          <span>Pawsitive Science</span>
+        <Link href="/" className="ps-header__brand" aria-label="Pawsitive Science home">
+          <Image
+            src="/pawsitive-science-logo.png"
+            alt="Pawsitive Science"
+            width={180}
+            height={60}
+            priority
+            className="ps-header__logo"
+          />
         </Link>
         <nav className="ps-header__nav">
           {nav.map((n) => {

@@ -265,7 +265,7 @@ small, .ps-meta {
   font-size: 19px; letter-spacing: -0.01em;
   color: var(--ps-navy); text-decoration: none;
 }
-.ps-header__brand img { width: 32px; height: 32px; object-fit: contain; }
+.ps-header__logo { width: clamp(140px, 14vw, 180px); height: auto; }
 .ps-header__nav { display: flex; gap: 2px; margin-left: 12px; flex: 1; }
 .ps-header__link {
   font-size: 14px; font-weight: 500;
