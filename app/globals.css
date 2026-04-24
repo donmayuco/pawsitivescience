@@ -313,8 +313,8 @@ small, .ps-meta {
 
 .ps-hero__media { position: relative; aspect-ratio: 4 / 5; }
 .ps-hero__rings {
-  position: absolute; inset: -6% -8%; width: 116%; z-index: 0;
-  opacity: 0.55;
+  position: absolute; inset: -4% -5%; width: 110%; z-index: 0;
+  opacity: 0.18;
   animation: ps-rings-drift 24s ease-in-out infinite alternate;
 }
 @keyframes ps-rings-drift {
