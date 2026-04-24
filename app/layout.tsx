@@ -1,27 +1,34 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "PawsitiveScience",
-  description: "Science-backed human–dog wellness, made simple.",
+  title: "Pawsitive Science — Stories and science of the human–canine bond",
+  description:
+    "Stories and science on how dogs help us hold on to our mental health — and what the research is quietly telling us about why.",
   icons: {
     icon: "/favicon.ico",
   },
 };
+
 export default function RootLayout({
   children,
 }: {
@@ -29,13 +36,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="min-h-screen bg-white text-zinc-900">
+      <body className={`${fraunces.variable} ${inter.variable}`}>
+        <div className="ps-wrap">
           <Header />
-          {children}
+          <main className="ps-main">{children}</main>
+          <Footer />
         </div>
-
-        {/* Vercel Analytics (production) */}
         <Analytics />
       </body>
     </html>
