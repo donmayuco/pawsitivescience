@@ -18,8 +18,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "PawsitiveScience",
   description: "Science-backed human–dog wellness, made simple.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
-
 export default function RootLayout({
   children,
 }: {
