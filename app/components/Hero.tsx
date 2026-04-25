@@ -6,20 +6,20 @@ export default function Hero() {
   return (
     <section className="ps-hero">
       <div className="ps-hero__text">
-        <div className="ps-eyebrow">A magazine about the human–canine bond</div>
+        <div className="ps-eyebrow">Stories of survival, healing, and the dogs who stayed</div>
         <h1 className="ps-display">
-          The bond is <em>the medicine</em>.
+          The dog who helped you <em>keep going</em>.
         </h1>
         <p className="ps-lead">
-          Stories and science on how dogs help us hold on to our mental health
-          — and what the research is quietly telling us about why.
+          Pawsitive Science honors the stories of people whose dogs helped them
+          survive, heal, reconnect, or make it through life when it felt impossible.
         </p>
         <div className="ps-hero__ctas">
-          <Link href="/stories" className="ps-btn ps-btn--primary">
-            Read a story <ArrowRight />
+          <Link href="/submit" className="ps-btn ps-btn--primary">
+            Tell your story <ArrowRight />
           </Link>
-          <Link href="/science" className="ps-btn ps-btn--secondary">
-            Explore the science
+          <Link href="/stories" className="ps-btn ps-btn--secondary">
+            Read stories
           </Link>
         </div>
       </div>

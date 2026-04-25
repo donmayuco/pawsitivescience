@@ -14,9 +14,9 @@ export default function Newsletter() {
         <img src="/atomic-rings.svg" alt="" />
       </div>
       <div className="ps-newsletter__text">
-        <div className="ps-eyebrow">The weekly digest</div>
-        <h2>One story. One study. One email a week.</h2>
-        <p className="ps-lead">No spam, ever — and it&apos;s easy to leave.</p>
+        <div className="ps-eyebrow">The story letter</div>
+        <h2>One human story. One piece of science. One reason to keep believing in the bond.</h2>
+        <p className="ps-lead">A quiet weekly note from the archive.</p>
       </div>
       <form
         className="ps-newsletter__form"

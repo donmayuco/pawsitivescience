@@ -16,11 +16,11 @@ export default function StoriesPage() {
     <>
       <header className="ps-storiesindex__head">
         <div className="ps-eyebrow">Stories</div>
-        <h1>People who found out their dog was part of the protocol.</h1>
+        <h1>Real stories about the dogs who helped people keep going.</h1>
         <p className="ps-lead">
-          First-person writing about the quiet, specific ways a dog changes a
-          life. Every story links to the peer-reviewed research behind what you
-          just read.
+          Depression, PTSD, loneliness, anxiety, grief, recovery: this archive
+          is for the human moments when a dog became structure, safety, contact,
+          or a reason to make it through the day.
         </p>
       </header>
       <div className="ps-filters">

@@ -23,15 +23,68 @@ export type Study = {
   peerReviewed: boolean;
 };
 
+export type StoryPrompt = {
+  theme: string;
+  title: string;
+  question: string;
+  details: string;
+};
+
 export const themes = [
   "All",
+  "Survival",
   "Anxiety",
   "Depression",
   "Grief",
   "PTSD",
-  "Rescue",
   "Loneliness",
+  "Recovery",
 ] as const;
+
+export const storyPrompts: StoryPrompt[] = [
+  {
+    theme: "Depression",
+    title: "The dog who got you through depression",
+    question: "Tell us about the dog who helped you get out of bed, stay alive, or make it to tomorrow.",
+    details:
+      "We are looking for honest stories about low days, tiny routines, medication seasons, relapse, recovery, and the animal who made life feel slightly more possible.",
+  },
+  {
+    theme: "PTSD",
+    title: "The dog who made the world feel safer",
+    question: "Tell us about the dog who helped you come back to your body after trauma.",
+    details:
+      "This can include service dogs, emotional support dogs, or the ordinary dog who noticed panic, nightmares, dissociation, hypervigilance, or the moment you needed grounding.",
+  },
+  {
+    theme: "Loneliness",
+    title: "The dog who kept you connected",
+    question: "Tell us about the dog who made silence less heavy.",
+    details:
+      "Stories can be about isolation, aging, moving somewhere new, divorce, empty rooms, long nights, or the daily companionship that kept you tied to the world.",
+  },
+  {
+    theme: "Anxiety",
+    title: "The dog who calmed your nervous system",
+    question: "Tell us about the dog who helped your breathing slow down.",
+    details:
+      "We want the small, specific moments: walks, pressure, eye contact, a head on your lap, or the simple presence that interrupted spiraling thoughts.",
+  },
+  {
+    theme: "Grief",
+    title: "The dog who stayed through grief",
+    question: "Tell us about the dog who helped you survive a loss.",
+    details:
+      "This might be the loss of a parent, partner, child, friend, home, identity, or previous version of yourself. The story does not need to be neat.",
+  },
+  {
+    theme: "Recovery",
+    title: "The dog who walked with your recovery",
+    question: "Tell us about the dog who helped you rebuild.",
+    details:
+      "Addiction recovery, illness, injury, burnout, eating disorder recovery, post-hospital life, or the long road back to trust all belong here.",
+  },
+];
 
 export const stories: Story[] = [
   {
@@ -75,7 +128,7 @@ export const stories: Story[] = [
     slug: "rescue-works-both-ways",
     title: "\"Rescue\" works both ways. Here's what the science says.",
     dek: "The asymmetry of the word is wrong — and so is the framing.",
-    theme: "Rescue",
+    theme: "Recovery",
     readTime: 5,
     author: "Dr. K. Chen",
     date: "Apr 04, 2026",
